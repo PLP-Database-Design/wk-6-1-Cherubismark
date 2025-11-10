@@ -45,8 +45,7 @@ All groups submit the full repository weekly for continuous progress and feedbac
         3. Confirm usability, performance, and security under expected workloads.
 - In-Scope Features (map to FR codes)
 
-  
-  | Code| Feature| Description|
+|Code        |Feature         |Description                        |
 | ---------- | -------------- | --------------------------------- |
 | FR-CAT-01  | Catalog        | Display, filter, search for books |
 | FR-CART-02 | Cart           | Add/update/remove items; subtotal |
@@ -146,5 +145,6 @@ All groups submit the full repository weekly for continuous progress and feedbac
 - 2–3 top defects with evidence and impact
 - Include a11y/perf highlights (metrics, tools)
 - Recommendations aligned to risk
+
 
 
