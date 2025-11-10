@@ -44,6 +44,7 @@ All groups submit the full repository weekly for continuous progress and feedbac
        2. Detect and resolve defects before release.
         3. Confirm usability, performance, and security under expected workloads.
 - In-Scope Features (map to FR codes)
+  
    | Code       | Feature        | Description                       |
 | ---------- | -------------- | --------------------------------- |
 | FR-CAT-01  | Catalog        | Display, filter, search for books |
@@ -58,6 +59,7 @@ All groups submit the full repository weekly for continuous progress and feedbac
 2. Real Paystack verification server callback
 
 - Environments (browsers/devices, throttling)
+  
 | Component     | Details                                              |
 | ------------- | ---------------------------------------------------- |
 | **OS**        | Windows 10 / Ubuntu 24.04                            |
@@ -74,6 +76,7 @@ All groups submit the full repository weekly for continuous progress and feedbac
 3. Axe Accessibility plugin
 
 - Risks and Mitigations
+  
 | Risk                      | Impact | Mitigation                                           |
 | ------------------------- | ------ | ---------------------------------------------------- |
 | Checkout payment failure  | High   | Validate `.env` Paystack key and use sandbox mode    |
@@ -106,6 +109,8 @@ All groups submit the full repository weekly for continuous progress and feedbac
 - Evidence: Screenshot/gif paths
 
 ### 🐞 Bug Report (defect log entry)
+
+
 | ID          | Summary                                          | Severity / Priority | Environment              | Affected FR(s) | Steps to Reproduce                                                                                           | Expected Result                                 | Actual Result                         |   | ----------- | ------------------------------------------------ | ------------------- | ------------------------ | -------------- | ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------- | ------------------------------------- | ------------------------------- |
 | BUG-CHK-01  | Checkout fails if Paystack key missing           | Critical / High     | Chrome 130+, Windows 10  | FR-CHK-03      | 1. Go to `/checkout` <br> 2. Attempt payment with empty `.env` key                                           | App shows error message and prevents submission | App crashes with uncaught exception   |
 | BUG-CAT-01  | Search finds partial matches                   | Minor / Medium      | Edge 130+, Windows 10    | FR-CAT-01      | 1. Go to `/catalog` <br> 2. Enter partial title e.g., "kill" <br> 3. Click search          | Partial match returns relevant books            | valid results found  |
@@ -140,3 +145,4 @@ All groups submit the full repository weekly for continuous progress and feedbac
 - 2–3 top defects with evidence and impact
 - Include a11y/perf highlights (metrics, tools)
 - Recommendations aligned to risk
+
