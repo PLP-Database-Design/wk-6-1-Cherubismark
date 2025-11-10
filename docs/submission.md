@@ -111,11 +111,12 @@ All groups submit the full repository weekly for continuous progress and feedbac
 ### 🐞 Bug Report (defect log entry)
 
 
-| ID          | Summary                                          | Severity / Priority | Environment              | Affected FR(s) | Steps to Reproduce                                                                                           | Expected Result                                 | Actual Result                         |   | ----------- | ------------------------------------------------ | ------------------- | ------------------------ | -------------- | ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------- | ------------------------------------- | ------------------------------- |
-|BUG-CHK-01  | Checkout fails if Paystack key missing           | Critical / High     | Chrome 130+, Windows 10  | FR-CHK-03      | 1. Go to `/checkout` <br> 2. Attempt payment with empty `.env` key                                           | App shows error message and prevents submission | App crashes with uncaught exception   |
-|BUG-CAT-01  | Search finds partial matches                   | Minor / Medium      | Edge 130+, Windows 10    | FR-CAT-01      | 1. Go to `/catalog` <br> 2. Enter partial title e.g., "kill" <br> 3. Click search          | Partial match returns relevant books            | valid results found  |
-|BUG-CAT-02 | Navbar search input not functioning, catalog search works | Major / High        | Chrome 130+, Windows 10 | FR-CAT-01      | 1. Use search input in Navbar <br> 2. Type a book title <br> 3. Press Enter | Should display matching books | No results displayed; search input does nothing | Screenshot of Navbar search; catalog search works |
+| ID          | Summary                                          | Severity / Priority | Environment              | Affected FR(s) | Steps to Reproduce                                                                                      | Expected Result                                 | Actual Result                         |  
+| ----------- | ------------------------------------------------ | ------------------- | ------------------------ | -------------- | ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------- | ------------------------------------- |
 
+|BUG-CHK-01   | Checkout fails if Paystack key missing           | Critical / High     | Chrome 130+, Windows 10  | FR-CHK-03      | 1. Go to `/checkout`  2. Attempt payment with empty `.env` key                                           | App shows error message and prevents submission |
+|BUG-CAT-01  | Search finds partial matches                   | Minor / Medium      | Edge 130+, Windows 10    | FR-CAT-01      | 1. Go to `/catalog`  2. Enter partial title e.g., "kill"  3. Click search          | Partial match returns relevant books            | valid results found  |
+|BUG-CAT-02 | Navbar search input not functioning, catalog search works | Major / High        | Chrome 130+, Windows 10 | FR-CAT-01      | 1. Use search input in Navbar  2. Type a book title  3. Press Enter | Should display matching books |
 
 
 ## 📚 Required Artifacts
@@ -145,6 +146,7 @@ All groups submit the full repository weekly for continuous progress and feedbac
 - 2–3 top defects with evidence and impact
 - Include a11y/perf highlights (metrics, tools)
 - Recommendations aligned to risk
+
 
 
 
