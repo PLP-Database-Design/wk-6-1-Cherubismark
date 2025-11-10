@@ -1,13 +1,25 @@
 # 📤 Submission Guidelines — Book Store App QA Project
 
+## Team members and their roles    
+| Name              | Role            |
+| ----------------- | --------------- |
+| **Dominic Kirui** | Project Manager |
+| ****       | Risk Analyst    |
+| ****       | Test Executor   |
+
+
+
 ## 📦 Weekly Submissions
 All groups submit the full repository weekly for continuous progress and feedback.
 
 ### Week 1: Initial Setup & Planning (Due: Wednesday, Nov 5, 2025)
 - Repo runs locally (`npm install`, `npm start`)
-- Project board (Jira/GitHub Projects) created and shared
+- Project board (https://trello.com/invite/b/6909c8aede29d1fd8dca980b/ATTI5a567bb75b5e43570e5bd14960088f9881BA4206/bookstore-qa-project) created and shared.
 - `tests/test-plan.md` (use template below)
 - Team roles and communication plan
+# Communication Plan
+- WhatsApp group for daily updates
+- Weekly Google Meet for progress review
 
 ### Week 2: Test Design & Early Execution (Due: Tuesday, Nov 11, 2025)
 - Draft test cases/checklists in `tests/test-cases.md` (use template below)
@@ -28,13 +40,59 @@ All groups submit the full repository weekly for continuous progress and feedbac
 ## 🧩 Templates
 ### 📝 Test Plan (tests/test-plan.md)
 - Objective and Scope
+       1.  Ensure all core functionalities (catalog, user accounts, cart, checkout, inventory, order tracking) meet functional and non-functional requirements.
+       2. Detect and resolve defects before release.
+        3. Confirm usability, performance, and security under expected workloads.
 - In-Scope Features (map to FR codes)
+   | Code       | Feature        | Description                       |
+| ---------- | -------------- | --------------------------------- |
+| FR-CAT-01  | Catalog        | Display, filter, search for books |
+| FR-CART-02 | Cart           | Add/update/remove items; subtotal |
+| FR-CHK-03  | Checkout       | Payment via Paystack              |
+| FR-ORD-04  | Order Tracking | Persistent order history          |
+| FR-AUTH-05 | Admin Access   | Guarded admin route               |
+
+
 - Out-of-Scope
+1. Backend API integration (mocked for testing)
+2. Real Paystack verification server callback
+
 - Environments (browsers/devices, throttling)
+| Component     | Details                                              |
+| ------------- | ---------------------------------------------------- |
+| **OS**        | Windows 10 / Ubuntu 24.04                            |
+| **Browser**   | Chrome 130+, Firefox 125+, Edge 130+                 |
+| **Backend**   | Node.js 20.x                                         |
+| **Database**  | Mock (localStorage)                                  |
+| **Tools**     | Postman, Selenium, Jest, Lighthouse, Chrome DevTools |
+| **Test Data** | 50 sample books, 3 test users, Paystack test cards   |
+
+ 
 - Tools (extensions, screen readers)
+1. Chrome DevTools
+2. Lighthouse
+3. Axe Accessibility plugin
+
 - Risks and Mitigations
+| Risk                      | Impact | Mitigation                                           |
+| ------------------------- | ------ | ---------------------------------------------------- |
+| Checkout payment failure  | High   | Validate `.env` Paystack key and use sandbox mode    |
+| localStorage quota        | Medium | Graceful fallback test and error logging             |
+| Unauthorized admin access | High   | Verify route guard and test invalid session behavior |
+| Performance regression    | Medium | Monitor LCP & TTI via Lighthouse                     |
+| A11y non-compliance       | Low    | Use keyboard + aria-label audit                      |
+
+
 - Test Types (functional, a11y, perf, compatibility, hygiene)
+ 1. Functional
+2. Accessibility
+3. Performance
+4. compatibility
+5. UI validation
+
 - Entry/Exit Criteria
+1. Entry: App deploys locally; all major features reachable.
+2. Exit: ≥ 90% test cases passed; all critical defects resolved.
 
 ### ✅ Test Case (tests/test-cases.md)
 - ID: TC-<area>-<number>
@@ -48,16 +106,12 @@ All groups submit the full repository weekly for continuous progress and feedbac
 - Evidence: Screenshot/gif paths
 
 ### 🐞 Bug Report (defect log entry)
-- ID: BUG-<area>-<number>
-- Summary: Clear, action-oriented title
-- Severity/Priority: (Critical/Major/Minor) / (High/Medium/Low)
-- Environment: Browser, version; OS/device; network
-- Affected FR(s): e.g., FR-O02
-- Steps to Reproduce: Numbered
-- Expected Result: …
-- Actual Result: …
-- Attachments: Paths to screenshots/videos
-- Notes: Workarounds, scope of impact
+| ID          | Summary                                          | Severity / Priority | Environment              | Affected FR(s) | Steps to Reproduce                                                                                           | Expected Result                                 | Actual Result                         |   | ----------- | ------------------------------------------------ | ------------------- | ------------------------ | -------------- | ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------- | ------------------------------------- | ------------------------------- |
+| BUG-CHK-01  | Checkout fails if Paystack key missing           | Critical / High     | Chrome 130+, Windows 10  | FR-CHK-03      | 1. Go to `/checkout` <br> 2. Attempt payment with empty `.env` key                                           | App shows error message and prevents submission | App crashes with uncaught exception   |
+| BUG-CAT-01  | Search finds partial matches                   | Minor / Medium      | Edge 130+, Windows 10    | FR-CAT-01      | 1. Go to `/catalog` <br> 2. Enter partial title e.g., "kill" <br> 3. Click search          | Partial match returns relevant books            | valid results found  |
+| BUG-CAT-02 | Navbar search input not functioning, catalog search works | Major / High        | Chrome 130+, Windows 10 | FR-CAT-01      | 1. Use search input in Navbar <br> 2. Type a book title <br> 3. Press Enter | Should display matching books | No results displayed; search input does nothing | Screenshot of Navbar search; catalog search works |
+
+
 
 ## 📚 Required Artifacts
 - Test plan, test cases, defect logs

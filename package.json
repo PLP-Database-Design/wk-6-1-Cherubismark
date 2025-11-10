@@ -34,3 +34,7 @@
     ]
   }
 }
+"scripts": {
+  "test": "jest"
+}
+
