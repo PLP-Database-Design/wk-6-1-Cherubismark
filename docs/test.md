@@ -34,4 +34,5 @@ TC-A11Y-01	Check keyboard accessibility for Navbar	App running	1. Press Tab to n
 TC-PERF-01	Measure LCP and TTI	App running locally	1. Open Lighthouse
 2. Run audit	LCP ≤ 2.5s, TTI ≤ 1s	None	lighthouse_report.png
 
-✅ Notes:
+
+
