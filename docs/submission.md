@@ -102,11 +102,19 @@ All groups submit the full repository weekly for continuous progress and feedbac
 - Title: Concise scenario name
 - Pre-conditions: State, user role, data
 - Steps:
-  1. …
+  1. 
   2. …
 - Expected Result: Observable outcomes (UI text, URL, ARIA, network where applicable)
 - Post-conditions: State changes
 - Evidence: Screenshot/gif paths
+
+| ID             | Feature      | Test Case Title                        | Precondition                | Steps                                                                    | Expected Result                                           | Status                   |
+| -------------- | ------------ | -------------------------------------- | --------------------------- | ------------------------------------------------------------------------ | --------------------------------------------------------- | ------------------------ |
+| *TC-CAT-01*  | Catalog      | Verify catalog displays all books      | App is running, books exist | 1. Navigate to /catalog <br> 2. Observe book list                      | All 6 books visible with title, author, price           | ✅ Pass                   |
+| *TC-CAT-02*  | Search       | Validate search returns relevant books | Catalog loaded              | 1. Search "kill"  2. Press Enter                                    | Books with "kill" in title/author appear                 | ✅ Pass                   |
+| *TC-CART-02* | Cart         | Update quantity                        | Book added to cart          | 1. Increase quantity to 2 <br> 2. Verify subtotal                        | Subtotal updates correctly                                |  ✅ 
+Pass                |
+
 
 ### 🐞 Bug Report (defect log entry)
 
