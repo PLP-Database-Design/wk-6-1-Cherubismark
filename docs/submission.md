@@ -4,7 +4,7 @@
 | Name              | Role            |
 | ----------------- | --------------- |
 | **Dominic Kirui** | Project Manager |
-| ****       | Risk Analyst    |
+| **Gilbert Keter** | Risk Analyst    |
 | ****       | Test Executor   |
 
 
@@ -146,6 +146,7 @@ All groups submit the full repository weekly for continuous progress and feedbac
 - 2–3 top defects with evidence and impact
 - Include a11y/perf highlights (metrics, tools)
 - Recommendations aligned to risk
+
 
 
 
