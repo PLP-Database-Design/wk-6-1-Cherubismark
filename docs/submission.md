@@ -43,7 +43,7 @@ All groups submit the full repository weekly for continuous progress and feedbac
        1.  Ensure all core functionalities (catalog, user accounts, cart, checkout, inventory, order tracking) meet functional and non-functional requirements.
        2. Detect and resolve defects before release.
         3. Confirm usability, performance, and security under expected workloads.
-- In-Scope Features (map to FR codes)
+- In-Scope Features (map to FR codes) <br>
    | Code       | Feature        | Description                       |
 | ---------- | -------------- | --------------------------------- |
 | FR-CAT-01  | Catalog        | Display, filter, search for books |
@@ -140,3 +140,4 @@ All groups submit the full repository weekly for continuous progress and feedbac
 - 2–3 top defects with evidence and impact
 - Include a11y/perf highlights (metrics, tools)
 - Recommendations aligned to risk
+
