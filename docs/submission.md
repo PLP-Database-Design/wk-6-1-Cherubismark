@@ -5,7 +5,7 @@
 | ----------------- | --------------- |
 | **Dominic Kirui** | Project Manager |
 | **Gilbert Keter** | Risk Analyst    |
-| ****       | Test Executor   |
+| **Bismark Koskei**       | Test Executor   |
 
 
 
@@ -154,6 +154,7 @@ Pass                |
 - 2–3 top defects with evidence and impact
 - Include a11y/perf highlights (metrics, tools)
 - Recommendations aligned to risk
+
 
 
 
