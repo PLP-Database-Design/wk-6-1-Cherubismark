@@ -73,7 +73,6 @@
 | Role | Responsibility |
 |------|----------------| 
 | Name              | Role            |
-| ----------------- | --------------- |
 | **Dominic Kirui** | Project Manager |
 | **Gilbert Keter** | Risk Analyst    |
 | **Bismark Koskei**| Test Executor   |
