@@ -1,20 +1,3 @@
-| **Test ID**    | **Feature**    | **Test Case Description**                        | **Preconditions**              | **Test Steps**                                                        | **Expected Result**                       | **Actual Result**         | **Status (Pass/Fail)** | **Evidence / Notes**                       |
-| -------------- | -------------- | ------------------------------------------------ | ------------------------------ | --------------------------------------------------------------------- | ----------------------------------------- | ------------------------- | ---------------------- | ------------------------------------------ |
-| **TC-CAT-01**  | Search         | Verify catalog search bar filters books by title | Catalog page loaded with books | 1. Open `/catalog` <br> 2. Type a book name <br> 3. Press Enter       | Display only books matching keyword       | As expected               | ✅ Pass                 | Screenshot: `catalog_search.png`           |
-| **TC-CAT-02**  | Search         | Verify Navbar search bar filters books           | Application home page loaded   | 1. Use Navbar search bar <br> 2. Enter book title <br> 3. Press Enter | Filtered results appear                   | Search bar not responding | ❌ Fail                 | Bug logged: *Navbar search not functional* |
-| **TC-CAT-03**  | Search         | Verify search is case-insensitive                | Catalog loaded                 | 1. Enter keyword “Kill” in search <br> 2. Observe results             | Books titled “To kill a mockingbird” appear        | As expected               | ✅ Pass                 | Screenshot: `case_insensitive.png`         |
-| **TC-CART-01** | Shopping Cart  | Verify adding a book to cart                     | Catalog visible                | 1. Click “Add to Cart” on a book <br> 2. Open `/cart`                 | Book appears in cart with correct details | As expected               | ✅ Pass                 | Screenshot: `add_to_cart.png`              |
-| **TC-CART-02** | Shopping Cart  | Verify updating quantity updates total           | Cart has items                 | 1. Change quantity from 1 to 2 <br> 2. Observe total                  | Total updates accordingly                 | As expected               | ✅ Pass                 | Screenshot: `cart_update.png`              |
-| **TC-CART-03** | Shopping Cart  | Verify removing an item updates cart             | Cart contains 1+ items         | 1. Click “Remove” <br> 2. Confirm action                              | Item disappears from cart                 | As expected               | ✅ Pass                 | Screenshot: `remove_cart.png`              |
-| **TC-CHK-01**  | Checkout       | Verify checkout button navigates correctly       | Cart not empty                 | 1. Click “Checkout” <br> 2. Observe navigation                        | Redirects to `/checkout`                  | As expected               | ✅ Pass                 | Screenshot: `checkout_nav.png`             |
-| **TC-CHK-02**  | Checkout       | Verify test payment via Paystack works           | Checkout form filled           | 1. Click “Pay with Paystack” <br> 2. Use test card                    | Payment success displayed                 | As expected               | ✅ Pass                 | Screenshot: `paystack_success.png`         |
-| **TC-AUTH-01** | Authentication | Verify unauthorized user cannot access admin     | Logged in as normal user       | 1. Go to `/admin`                                                     | Access denied message shown               | As expected               | ✅ Pass                 | Screenshot: `unauthorized_admin.png`       |
-| **TC-AUTH-02** | Authentication | Verify admin access granted for admin users      | Logged in as admin             | 1. Go to `/admin`                                                     | Admin dashboard loads                     | As expected               | ✅ Pass                 | Screenshot: `admin_access.png`             |
-| **TC-A11Y-01** | Accessibility  | Verify keyboard navigation works                 | App running                    | 1. Press `Tab` to move across links <br> 2. Press `Enter`             | Focus visible, navigation works           | As expected               | ✅ Pass                 | Screenshot: `keyboard_nav.png`             |
-| **TC-PERF-01** | Performance    | Verify page load performance (Lighthouse)        | App running                    | 1. Run Lighthouse audit                                               | LCP ≤ 2.5s, TTI ≤ 1s                      | As expected               | ✅ Pass                 | Lighthouse report attached                 |
-
-
-
 | **TC ID** | **Test Case Description** | **Test Steps** | **Expected Result** | **Status** |
 |------------|---------------------------|----------------|---------------------|-------------|
 | TC01 | Verify the homepage loads correctly | Open `/` in browser | Homepage displays book catalog | ✅ Passed |
@@ -37,3 +20,15 @@
 | TC18 | Verify admin dashboard access restricted to admin users | Login as normal user, access `/admin` | Unauthorized access error shown | ❌ Failed |
 | TC19 | Verify email notification sent on successful order | Place an order | Email received in inbox | ⏳ Pending |
 | TC20 | Verify risk assessment log updates after each test cycle | Review risk log after testing | Log file updates with latest status | ⏳ Pending |
+
+
+
+✅ Summary:
+
+Total Cases: 20
+
+Passed: 15
+
+Failed: 3
+
+Pending: 2
