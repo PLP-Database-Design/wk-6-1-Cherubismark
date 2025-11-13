@@ -7,3 +7,13 @@
 | BUG-03 | Text overlap on small screens | Mobile layout shows overlapping elements | High | 🔄 In Progress | Affects checkout section | QA Team |
 | BUG-04 | Error message overlaps navbar | Checkout error message covers header area | Medium | ❌ Fail | CSS fix required | QA Team |
 | BUG-05 | Android display verification pending | App layout not tested yet on Android browser | Low | 🔄 In Progress | Awaiting device testing | QA Team |
+
+
+| **Result** | **Count** |
+|------------|-----------|
+| Pass       | 0         |
+| Fail       | 3         |
+| In Progress| 2         |
+| **Total Bugs** | 5     |
+
+
