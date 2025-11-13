@@ -118,7 +118,14 @@ All groups submit the full repository weekly for continuous progress and feedbac
 - Evidence: Screenshot/gif paths
 
 
-### 🐞 Bug Report (defect log entry)
+### 🐞 Bug Report (defect log entry)(docs/Defect log.md)
+
+| **Result** | **Count** |
+|------------|-----------|
+| Pass       | 0         |
+| Fail       | 3         |
+| In Progress| 2         |
+| **Total Bugs** | 5     |
 
 
 
@@ -150,5 +157,6 @@ All groups submit the full repository weekly for continuous progress and feedbac
 - 2–3 top defects with evidence and impact
 - Include a11y/perf highlights (metrics, tools)
 - Recommendations aligned to risk
+
 
 
