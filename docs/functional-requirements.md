@@ -12,6 +12,7 @@ This specification is explicit and test‑ready. It defines observable behaviors
 Browse titles, search, filter, and sort.
 
 ### User Stories
+
 - As a user, I can search books by title, author, or description.
 - As a user, I can filter by genre, price band, and rating.
 - As a user, I can sort by price, rating, and popularity.
