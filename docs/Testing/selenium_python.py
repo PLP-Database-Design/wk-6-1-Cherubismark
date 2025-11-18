@@ -1,6 +1,4 @@
-
- # Document Name : Bookstore QA Project Team TNNP
-
+# Document Name : Bookstore QA Project Team TNNP
 
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
@@ -94,8 +92,8 @@ try:
     
     # Clear and type search term
     search.clear()
-    search.send_keys("Mocking")
-    print("Search term entered")
+    search.send_keys("Gatsby")
+    print("Search term 'Gatsby' entered")
     
     # Try pressing Enter to trigger search
     search.send_keys(Keys.RETURN)
@@ -109,42 +107,88 @@ try:
     driver.save_screenshot("debug_screenshot_after_search.png")
     print("Screenshot after search saved")
     
-    # Try multiple selectors for book elements
+    # Try multiple selectors for book elements - FILTER FOR VISIBLE BOOKS ONLY
     book_selectors = [
+        "[data-testid*='book-card']",  # More specific first
+        ".BookCard[data-testid]",
+        ".book-card[data-testid]", 
+        "[data-testid*='book']",
         ".BookCard",
-        ".book-card",
+        ".book-card", 
         ".book",
         ".card",
-        "[data-testid*='book']",
-        ".MuiCard-root"  # Material-UI card
+        ".MuiCard-root"
     ]
     
     books = []
     for selector in book_selectors:
-        books = driver.find_elements(By.CSS_SELECTOR, selector)
-        if books:
-            print(f"Found {len(books)} books using selector: {selector}")
-            break
+        all_elements = driver.find_elements(By.CSS_SELECTOR, selector)
+        if all_elements:
+            # Filter only visible books
+            visible_books = [book for book in all_elements if book.is_displayed()]
+            print(f"Found {len(all_elements)} total elements, {len(visible_books)} visible books using selector: {selector}")
+            
+            # DEBUG: Print details about visible books
+            if visible_books:
+                print(f"\n=== VISIBLE BOOKS DETAILS ===")
+                for i, book in enumerate(visible_books):
+                    try:
+                        title_element = book.find_element(By.CSS_SELECTOR, "h2, h3, h4, .title, [data-testid*='title'], .book-title")
+                        title_text = title_element.text
+                        print(f"Visible Book {i+1}: '{title_text}'")
+                    except:
+                        try:
+                            # If no specific title element, show the text content
+                            book_text = book.text.replace('\n', ' ')[:100] if book.text else "No text content"
+                            print(f"Visible Book {i+1}: {book_text}...")
+                        except:
+                            print(f"Visible Book {i+1}: Could not extract details")
+            
+            if visible_books:
+                books = visible_books
+                break
     
     if not books:
-        print("No books found with any selector. Looking for any card-like elements...")
-        # Look for any elements that might contain books
+        print("No visible books found with any selector. Looking for any visible card-like elements...")
+        # Look for any elements that might contain books (only visible ones)
         all_cards = driver.find_elements(By.CSS_SELECTOR, "div, article, section, li")
+        visible_cards = [card for card in all_cards[:30] if card.is_displayed() and card.text.strip()]
         card_count = 0
-        for card in all_cards[:20]:  # Check first 20 elements
+        for card in visible_cards:
             text = card.text.strip()
             if text and len(text) > 10:  # If it has substantial text
-                print(f"Potential book element: {text[:50]}...")
+                print(f"Potential visible book element: {text[:50]}...")
                 card_count += 1
-        print(f"Found {card_count} potential book containers")
+        print(f"Found {card_count} potential visible book containers")
     
     # Check if we're on a different page or if there's an error message
     error_messages = driver.find_elements(By.CSS_SELECTOR, ".error, .alert, .message, [role='alert']")
     if error_messages:
         for error in error_messages:
-            print(f"Error message found: {error.text}")
+            if error.is_displayed():
+                print(f"Visible error message: {error.text}")
     
-    assert len(books) > 0, f"Expected at least 1 book, but found {len(books)}"
+    # Assertion based on VISIBLE books only
+    print(f"\n=== FINAL TEST RESULTS ===")
+    print(f"Visible books found: {len(books)}")
+    
+    assert len(books) > 0, f"Expected at least 1 visible book, but found {len(books)}"
+    
+    # Additional verification: Check if the visible book contains "Gatsby"
+    book_titles = []
+    for book in books:
+        try:
+            title_element = book.find_element(By.CSS_SELECTOR, "h2, h3, h4, .title, [data-testid*='title']")
+            title_text = title_element.text.lower()
+            book_titles.append(title_text)
+            if "gatsby" in title_text:
+                print(f"✅ SUCCESS: Found book containing 'Gatsby': {title_element.text}")
+        except:
+            continue
+    
+    if book_titles:
+        print(f"All visible book titles: {book_titles}")
+    
     print("Search test passed!")
     
 except Exception as e:
