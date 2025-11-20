@@ -7,3 +7,12 @@
 | BUG-03 | Text overlap on mobile | Checkout text overlaps | High | In Progress | CSS fix required | QA Team | CheckoutForm |
 | BUG-04 | Error message overlaps navbar | Checkout error covers header | Medium | Fail | CSS adjustment | QA Team | CheckoutForm |
 | BUG-05 | Android display verification pending | Not yet tested | Low | In Progress | Await device | QA Team | Responsive UI |
+
+
+# # Summary table 
+
+| Severity Level | Number of Bugs | Bug IDs        |
+| -------------- | -------------- | -------------- |
+| **High**       | 1              | BUG-03         |
+| **Medium**     | 2              | BUG-01, BUG-04 |
+| **Low**        | 2              | BUG-02, BUG-05 |
