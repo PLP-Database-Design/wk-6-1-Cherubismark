@@ -122,6 +122,11 @@ Testing was executed across multiple devices, browsers, and network conditions t
 
 *Observations:* Core flows pass consistently. High-severity defects require hotfix before production deployment.
 
+## 7.1. Automation Test Overview
+
+| Total Test Cases | Passed | Failed | Execution Time |
+|-----------------|-------|-------|----------------|
+| 1 (Search Functionality) | ✅ 1 | ❌ 0 | [HH:MM:SS] |
 ---
 
 ## 8. Risk Assessment
