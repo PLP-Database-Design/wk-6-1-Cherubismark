@@ -162,6 +162,7 @@ Testing was executed across multiple devices, browsers, and network conditions t
 4. Defect log : (https://github.com/PLP-Database-Design/wk-6-1-Cherubismark/blob/main/docs/Testing/Defect_Log.md)
 5. Test plan : (https://github.com/PLP-Database-Design/wk-6-1-Cherubismark/blob/main/docs/Testing/Test_Plan.md)
 6. Automation/Selenium : (https://github.com/PLP-Database-Design/wk-6-1-Cherubismark/blob/main/docs/Testing/selenium_python.py)
+7. Project Board/ Trello : (https://trello.com/invite/b/6909c8aede29d1fd8dca980b/ATTI5a567bb75b5e43570e5bd14960088f9881BA4206/bookstore-qa-project)
 
    
 ---
