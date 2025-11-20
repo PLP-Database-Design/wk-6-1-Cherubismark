@@ -6,12 +6,15 @@
 *Version:* 1.0  
 
 ---
+
 ## Team members and their roles
 
-|Name           |	Role           |
-|Dominic Kirui  |	Project Manager|
-|Gilbert Keter  |Risk Analyst    |
-|Bismark Koskei	|Test Executor   |
+| **Name**       | **Role**        |
+| -------------- | --------------- |
+| Dominic Kirui  | Project Manager |
+| Gilbert Keter  | Risk Analyst    |
+| Bismark Koskei | Test Executor   |
+
 
 ## 📝 Executive Summary
 This report presents the results of comprehensive QA testing conducted on the *TNNP BookStore Web Application* until November 18, 2025.  
@@ -153,12 +156,14 @@ Testing was executed across multiple devices, browsers, and network conditions t
 ---
 ## 11. APENDIX.
 
- 5 mins Video : (https://drive.google.com/file/d/19TX4oKjs9QCbHIXGtrsJLmVtDc26sO-A/view?usp=sharing)
- test cases : (https://github.com/PLP-Database-Design/wk-6-1-Cherubismark/blob/main/docs/Testing/Test_Cases.md)
- evidence/screenshots : (https://github.com/PLP-Database-Design/wk-6-1-Cherubismark/tree/main/docs/Testing/evidence/screenshots)
- defect log : (https://github.com/PLP-Database-Design/wk-6-1-Cherubismark/blob/main/docs/Testing/Defect_Log.md)
- test plan : (https://github.com/PLP-Database-Design/wk-6-1-Cherubismark/blob/main/docs/Testing/Test_Plan.md)
- Automation/Selenium : (https://github.com/PLP-Database-Design/wk-6-1-Cherubismark/blob/main/docs/Testing/selenium_python.py)
+1. 5 mins Video : (https://drive.google.com/file/d/19TX4oKjs9QCbHIXGtrsJLmVtDc26sO-A/view?usp=sharing)
+2. Test cases : (https://github.com/PLP-Database-Design/wk-6-1-Cherubismark/blob/main/docs/Testing/Test_Cases.md)
+3. Evidence/screenshots : (https://github.com/PLP-Database-Design/wk-6-1-Cherubismark/tree/main/docs/Testing/evidence/screenshots)
+4. Defect log : (https://github.com/PLP-Database-Design/wk-6-1-Cherubismark/blob/main/docs/Testing/Defect_Log.md)
+5. Test plan : (https://github.com/PLP-Database-Design/wk-6-1-Cherubismark/blob/main/docs/Testing/Test_Plan.md)
+6. Automation/Selenium : (https://github.com/PLP-Database-Design/wk-6-1-Cherubismark/blob/main/docs/Testing/selenium_python.py)
+
+   
 ---
 
 ## 12. Approvals
