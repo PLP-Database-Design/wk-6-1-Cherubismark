@@ -1,4 +1,4 @@
-# 📄 TNNP BookStore QA Project — Final Test Report
+#  TNNP BookStore QA Project — Final Test Report
 
 *Document ID:* TR-TNNP-2025-001  
 *Date of Report:* November 20, 2025  
@@ -16,7 +16,7 @@
 | Bismark Koskei | Test Executor   |
 
 
-## 📝 Executive Summary
+##  Executive Summary
 This report presents the results of comprehensive QA testing conducted on the *TNNP BookStore Web Application* until November 18, 2025.  
 Testing focused on validating core features, detecting and logging defects, ensuring accessibility compliance, and evaluating performance across multiple devices and browsers.  
 
