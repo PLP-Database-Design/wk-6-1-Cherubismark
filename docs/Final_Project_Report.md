@@ -107,11 +107,6 @@ Testing was executed across multiple devices, browsers, and network conditions t
 | Backend   | Node.js 20.x (mocked APIs) |
 | Database  | localStorage (mock) |
 
-### 6.2 Network Conditions Tested
-- High-speed Wi-Fi (100+ Mbps)  
-- 4G LTE (10–20 Mbps)  
-- Throttled 3G (1–2 Mbps)  
-- Offline mode (data sync verification)
 
 ---
 
@@ -171,9 +166,15 @@ Testing was executed across multiple devices, browsers, and network conditions t
 | Role             | Name             | Date       | Approval Notes |
 | ---------------- | ---------------- | ---------- | -------------- |
 | QA Lead          | Dominic Kirui    | Nov 20, 2025 | Approves release with pending high-severity fixes |
-| Development Lead | Bismark Koskei   | Nov 20, 2025 | Confirms core functionality complete |
+| Development Lead | Bismark Cheruiyot   | Nov 20, 2025 | Confirms core functionality complete |
 | Risk analyst lead    | Gilbert Keter    | Nov 20, 2025 | Accepts risks and business value of release |
 
 ---
+
+### 13. Conclusion
+
+The TNNP Bookstore App is functional but requires key fixes before it can be considered stable for deployment. Addressing the listed defects will significantly improve usability, accessibility, and reliability.
+
+
 
 *End of Report*
